@@ -6,5 +6,8 @@ class Fish
       @name = name
     end 
 
+    def name()
+        return @name
+    end 
 
 end
