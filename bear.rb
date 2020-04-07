@@ -6,6 +6,7 @@ class Bear
       @name = name
       @type = type
       @stomach = []
+      @roar = "roaaaaaarrrr!!"
     end 
 
     def name()
@@ -16,6 +17,10 @@ class Bear
         return @type
     end 
 
+    def bear_roar()
+        return @roar
+    end 
+    
     def fish_in_stomach()
         return @stomach.count
     end 

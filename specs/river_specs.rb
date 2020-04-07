@@ -9,7 +9,7 @@ require_relative('../bear')
 class RiverTest < MiniTest::Test
 
     def setup ()
-        @river = River.new("Moody Blue", ["Bob", "Pop", "Nemo", "Bill", "Rob", "Jaws"])
+        @river = River.new("Moody Blue", ["Bob", "Pop", "Bill", "Rob", "Jaws", "Nemo"])
     end
 
     def test_name()
@@ -17,7 +17,20 @@ class RiverTest < MiniTest::Test
     end 
        
     def test_check_fish()
-        assert_equal(["Bob", "Pop", "Nemo", "Bill", "Rob", "Jaws"], @river.fish())
+        assert_equal("Bob", "Pop", "Bill", "Rob", "Jaws", "Nemo", @river.fish())
     end 
+
+    def test_count_fish()
+        assert_equal(6, @river.count_fish())
+    end
+    
+    def test_lose_fish()
+        assert_equal(5, @river.count_fish)
+    end
+
+
+
+#  A river should lose a fish when a bear takes a fish
+
 
 end 

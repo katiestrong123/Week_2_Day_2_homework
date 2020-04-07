@@ -15,4 +15,13 @@ class River
         return @fish
     end 
 
+    def count_fish()
+        return @fish.count()
+    end 
+
+    def lose_fish(fish)
+        @fish.delete(fish)
+    end 
+
+
 end 

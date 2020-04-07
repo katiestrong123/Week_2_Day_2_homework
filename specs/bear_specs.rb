@@ -37,16 +37,6 @@ class   BearTest < MiniTest::Test
     end 
 
 
-# ____________________________________________________________________
 
-    # def test_passenger_count
-    #     assert_equal(0, @bus.passenger_count())
-    # end 
-   
-    # def test_pickup_passenger
-    #     @bus.pickup_passenger(@passenger)
-    #     assert_equal(1, @bus.passenger_count())
-    # end 
 
-    # A bear should be able to take a fish from the river
 end 
