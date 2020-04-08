@@ -43,11 +43,41 @@ class   BearTest < MiniTest::Test
         assert_equal(3, @bear.fish_in_stomach())
     end 
 
+
+
+
+    # def test_bear_eat_fish_from_river()
+    #     @bear.eats_from_river(@river)
+    #     assert_equal(2, @bear.fish_in_stomach)
+    #     assert_equal(4, @river.count_fish)
+    # end 
+
     def test_bear_eats_fish_from_river()
-        @bear.eats_from_river(@river)
-        assert_equal(2, @bear.fish_in_stomach)
-        assert_equal(4, @river.count_fish)
+        @bear.eat_fish_from_river(@fish1)
+        @river = River.new("Moody Blue"@river = River.new("Moody Blue", ["Bob", "Pop", "Bill", "Rob", "Jaws", "Nemo"])
+        @river = @fish.delete("Nemo")
+        assert_equal(1, @bear.fish_in_stomach())
+        assert_equal(5, @river.count_fish)
     end 
+
+    def test_bear_eats_multiple_fish_from_river()
+        @bear.eat_fish_from_river(@fish1)
+        @bear.eat_fish_from_river(@fish2)
+        @bear.eat_fish_from_river(@fish3)
+        @river = River.new("Moody Blue"@river = River.new("Moody Blue", ["Bob", "Pop", "Bill", "Rob", "Jaws", "Nemo"])
+        @river = @fish.delete("Nemo", "Jaws", "Rob")
+        assert_equal(3, @bear.fish_in_stomach())
+        assert_equal(3, @river.count_fish)
+    end 
+
+# def test_pick_up_from_stop()
+#     @stop1 = BusStop.new("Elm Row")
+#     @stop1.add_to_queue(@passenger1)
+#     @bus.pick_up_from_stop(@stop1)
+#     assert_equal(1, @bus.passenger_count())
+#     assert_equal(0, @stop1.queue_length())
+#   end
+
 
 
 end 
